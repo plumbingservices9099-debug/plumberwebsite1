@@ -47,7 +47,7 @@ export function Header({ currentPage, onActionClick }: HeaderProps) {
           <OptimizedImage
             src="/images/logo.png"
             alt="FIXIT PLUMBER logo"
-            width={265}
+            width={240}
             height={80}
             loading="eager"
             className="h-10 sm:h-11 w-auto object-contain"
