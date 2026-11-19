@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Set SITE_URL=https://yourdomain.com during build to emit absolute Sitemap URL
+Sitemap: /sitemap.xml
