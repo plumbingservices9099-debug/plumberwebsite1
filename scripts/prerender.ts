@@ -147,17 +147,15 @@ async function run() {
     }
   }
 
-  // Generate sitemap.xml matching canonical URLs
-  const sitemapComment = siteUrl
-    ? ''
-    : '\n<!-- NOTE: Set SITE_URL=https://yourdomain.com before building for production to emit absolute https:// sitemap URLs. -->';
+  // Generate sitemap.xml with full absolute URLs for search console compatibility
+  const sitemapBaseUrl = siteUrl || 'https://www.fixitplumber.in';
   const sitemapEntries = INDEXABLE_ROUTES.map((route) => {
-    const loc = escapeXml(buildAbsoluteOrPathUrl(siteUrl, route.path));
+    const loc = escapeXml(buildAbsoluteOrPathUrl(sitemapBaseUrl, route.path));
     const priority = route.path === '/' ? '1.0' : '0.8';
     return `  <url>\n    <loc>${loc}</loc>\n    <changefreq>monthly</changefreq>\n    <priority>${priority}</priority>\n  </url>`;
   }).join('\n');
 
-  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>${sitemapComment}\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
+  const sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${sitemapEntries}\n</urlset>\n`;
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
 
   // Generate robots.txt
