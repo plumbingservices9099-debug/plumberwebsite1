@@ -47,7 +47,7 @@ export function StatsSection() {
     const initial: Record<string, number> = {};
     for (const stat of PARSED_STATS) {
       if (stat.parsed.isNumericCountUp) {
-        initial[stat.id] = 0;
+        initial[stat.id] = stat.parsed.target;
       }
     }
     return initial;
@@ -80,6 +80,14 @@ export function StatsSection() {
         setFinalValues();
         return;
       }
+
+      const zeroCounts: Record<string, number> = {};
+      for (const stat of PARSED_STATS) {
+        if (stat.parsed.isNumericCountUp) {
+          zeroCounts[stat.id] = 0;
+        }
+      }
+      setCounts(zeroCounts);
 
       const startTime = performance.now();
 

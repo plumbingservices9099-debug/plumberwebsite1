@@ -153,13 +153,20 @@ export function NewConstructionPage() {
               className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
             >
               water heater and pump installations
-            </AppLink>{' '}
-            and{' '}
+            </AppLink>
+            ,{' '}
             <AppLink
               href={ROUTE_REGISTRY['drain-sewer'].path}
               className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
             >
               drainage and sewer line connections
+            </AppLink>
+            , and ongoing{' '}
+            <AppLink
+              href={ROUTE_REGISTRY['maintenance-inspection'].path}
+              className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
+            >
+              plumbing maintenance and inspections
             </AppLink>{' '}
             for residential projects.
           </p>

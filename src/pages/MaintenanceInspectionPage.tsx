@@ -125,12 +125,19 @@ export function MaintenanceInspectionPage({
               >
                 drainage connections
               </AppLink>{' '}
-              helps property owners identify potential problems and plan necessary repairs or{' '}
+              helps property owners identify potential problems and plan necessary repairs,{' '}
               <AppLink
                 href={ROUTE_REGISTRY['installation-replacement'].path}
                 className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
               >
                 pipe and water heater replacements
+              </AppLink>
+              , or{' '}
+              <AppLink
+                href={ROUTE_REGISTRY['new-construction'].path}
+                className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
+              >
+                full home re-piping and remodeling plumbing
               </AppLink>
               .
             </p>

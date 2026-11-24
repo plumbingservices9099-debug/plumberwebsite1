@@ -236,6 +236,13 @@ export function DrainSewerPage(_props: DrainSewerPageProps) {
               </AppLink>
               ,{' '}
               <AppLink
+                href={ROUTE_REGISTRY['new-construction'].path}
+                className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
+              >
+                new construction or remodeling pipelines
+              </AppLink>
+              ,{' '}
+              <AppLink
                 href={ROUTE_REGISTRY['maintenance-inspection'].path}
                 className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
               >

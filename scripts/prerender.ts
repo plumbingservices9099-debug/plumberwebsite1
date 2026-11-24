@@ -95,11 +95,10 @@ function injectRouteIntoTemplate(
   );
 
   const lcpWebpPath = route.ogImage.replace(/\.(jpg|jpeg|png)$/i, '.webp');
-  const lcpWebpUrl = buildAbsoluteOrPathUrl(siteUrl, lcpWebpPath);
   const preloadLcpTag =
     route.key === 'not-found'
       ? ''
-      : `<link rel="preload" as="image" href="${escapeHtmlAttr(lcpWebpUrl)}" type="image/webp" fetchpriority="high" />`;
+      : `<link rel="preload" as="image" href="${escapeHtmlAttr(lcpWebpPath)}" type="image/webp" fetchpriority="high" />`;
 
   html = html.replace('<!--preload-lcp-->', preloadLcpTag);
   html = html.replace('<!--structured-data-->', jsonLdTag);
@@ -159,9 +158,7 @@ async function run() {
   fs.writeFileSync(path.join(DIST_DIR, 'sitemap.xml'), sitemapXml, 'utf-8');
 
   // Generate robots.txt
-  const sitemapDirective = siteUrl
-    ? `Sitemap: ${siteUrl}/sitemap.xml`
-    : `# Set SITE_URL=https://yourdomain.com before building for absolute Sitemap URL\nSitemap: /sitemap.xml`;
+  const sitemapDirective = `Sitemap: ${sitemapBaseUrl}/sitemap.xml`;
   const robotsTxt = `User-agent: *\nAllow: /\n\n${sitemapDirective}\n`;
   fs.writeFileSync(path.join(DIST_DIR, 'robots.txt'), robotsTxt, 'utf-8');
 

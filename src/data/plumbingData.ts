@@ -204,7 +204,7 @@ export const PLUMBING_SERVICES: ServiceItem[] = [
   {
     id: 'emergency',
     title: 'Emergency Plumbing Services',
-    description: '24/7 rapid response for bursts, floods and urgent plumbing issues.',
+    description: '24/7 emergency plumbing support for burst pipes, leaks, and urgent issues.',
     image: '/images/service-14-emergency.jpg',
     imageAlt: 'Plumber in an orange vest shutting off a spraying burst pipe valve beside a toolbox at night',
     width: 525,
@@ -288,7 +288,8 @@ export const FAQ_ITEMS: FaqItem[] = [
   },
   {
     question: 'Do you provide emergency plumbing assistance?',
-    answer: 'Contact us to check emergency plumbing service availability.',
+    answer:
+      'Yes, FIXIT PLUMBER provides 24/7 emergency plumbing support in Patna for urgent issues such as burst pipes, sudden leaks, overflows, and pump problems. Call +91 9507611252 or contact us on WhatsApp anytime.',
   },
   {
     question: 'Can I get an estimate before the work starts?',
@@ -309,7 +310,7 @@ export const CONTACT_BULLETS = [
   'Quality Workmanship',
   'Customer Satisfaction',
   'Easy WhatsApp Service Request',
-  'Emergency Plumbing Support',
+  '24/7 Emergency Plumbing Support',
 ];
 
 export const HOME_SERVICE_AREAS = [

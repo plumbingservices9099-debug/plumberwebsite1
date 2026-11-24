@@ -251,7 +251,14 @@ export function InstallationReplacementPage({
               >
                 new construction and remodeling plumbing
               </AppLink>{' '}
-              services, or keep new fixtures reliable with{' '}
+              services, connect sump pump lines with{' '}
+              <AppLink
+                href={ROUTE_REGISTRY['drain-sewer'].path}
+                className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"
+              >
+                drainage and sewer services
+              </AppLink>
+              , or keep new fixtures reliable with{' '}
               <AppLink
                 href={ROUTE_REGISTRY['maintenance-inspection'].path}
                 className="text-[#002B5C] font-semibold underline decoration-[#002B5C]/40 underline-offset-2 hover:text-[#135CB8] transition-colors"

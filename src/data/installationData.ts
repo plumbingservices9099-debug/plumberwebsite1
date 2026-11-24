@@ -79,17 +79,17 @@ export const INSTALLATION_SERVICES: InstallationServiceSection[] = [
     imageAlt: 'Technician adjusting a valve on a floor-mounted pump connected to stainless steel manifold pipes',
     paragraphs: [
       'Unwanted water accumulation in basements and low-lying areas can create problems for a property. A suitable sump pump system helps collect and remove accumulated water through a connected drainage arrangement.',
-      'FIXIT PLUMBER provides sump pump installation assistance based on site conditions, drainage requirements and the plumbing connections needed for the system.',
+      'FIXIT PLUMBER provides sump pump installation, replacement, and pipe connection services based on site conditions, drainage requirements and the plumbing setup needed for your property.',
     ],
     bullets: [
-      'Sump pump installation assistance',
+      'Sump pump installation and replacement services',
       'Suitable drainage pipe connections',
       'Solutions for water accumulation areas',
       'Proper positioning and plumbing connections',
-      'Installation based on site requirements',
+      'Setup and servicing based on site requirements',
     ],
     caption:
-      'Sump pump installation, pump pipe connection and plumbing setup, and replacement of existing sump pumps.',
+      'Sump pump installation, pump pipe connection and plumbing services, and replacement of existing sump pumps.',
   },
   {
     id: 'heat-pump-installation',

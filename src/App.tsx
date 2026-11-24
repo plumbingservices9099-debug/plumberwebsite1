@@ -27,6 +27,7 @@ import {
   BUSINESS_PHONE_DISPLAY,
   BUSINESS_PHONE_TEL,
   BUSINESS_WHATSAPP_LINK,
+  BUSINESS_WHATSAPP_URL,
   HERO_FEATURES,
   WHY_CHOOSE_CARDS,
   PLUMBING_SERVICES,
@@ -317,9 +318,9 @@ export default function App({ initialPath = '/' }: AppProps) {
                       Patna
                     </h1>
                     <p className="mt-5 text-white/95 text-[15px] sm:text-[17px] leading-[1.55] max-w-[540px] font-normal">
-                      Reliable Plumbing Solutions for Your Home. Expert Repairs,
-                      <br className="hidden sm:inline" /> Quality Installation and Professional
-                      Plumbing Services in Patna.
+                      Reliable Plumbing Solutions for Your Home. Expert Repairs, Quality
+                      <br className="hidden sm:inline" /> Installation and 24/7 Emergency Plumbing
+                      Support in Patna.
                     </p>
 
                     <div className="mt-7 flex flex-wrap items-center gap-3">
@@ -558,8 +559,8 @@ export default function App({ initialPath = '/' }: AppProps) {
                   Need Professional Plumbing Services?
                 </h2>
                 <p className="mt-3 text-white/85 text-[14.5px] sm:text-[15.5px] max-w-[580px] mx-auto leading-relaxed">
-                  Looking for reliable plumbing services? Contact FIXIT PLUMBER today. We are ready
-                  to help with your plumbing requirements.
+                  Looking for reliable residential plumbing services or 24/7 emergency assistance in
+                  Patna? Call or WhatsApp FIXIT PLUMBER directly—we are ready to help.
                 </p>
                 <div className="mt-7 flex flex-wrap items-center justify-center gap-4">
                   <a
@@ -639,13 +640,36 @@ export default function App({ initialPath = '/' }: AppProps) {
                   <div className="text-[34px] font-bold text-[#002B5C] leading-none mb-4 select-none">
                     &ldquo;
                   </div>
-                  <p className="text-[17px] italic text-[#1E293B] mb-4">
-                    Genuine customer reviews coming soon...
+                  <p className="text-[17px] font-semibold text-[#1E293B] mb-3">
+                    Customer Feedback &amp; Honest Reviews
                   </p>
-                  <p className="text-[12.5px] text-[#1E293B] max-w-[440px] mx-auto leading-relaxed">
-                    This space is reserved for authentic feedback from our customers. Verified
-                    reviews will be added here as they are received.
+                  <p className="text-[13.5px] text-[#1E293B] max-w-[490px] mx-auto leading-relaxed">
+                    We appreciate honest feedback from homeowners and businesses across Patna who
+                    have used FIXIT PLUMBER. If our team recently assisted you, please share your
+                    experience with us directly—verified customer reviews are published here as they
+                    are received.
                   </p>
+                  <div className="mt-6 flex flex-wrap items-center justify-center gap-4 text-[13.5px] font-semibold">
+                    <a
+                      href={`${BUSINESS_WHATSAPP_URL}?text=${encodeURIComponent(
+                        'Hello FIXIT PLUMBER, I would like to share feedback on my plumbing service.'
+                      )}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-[#002B5C] underline decoration-[#002B5C]/45 underline-offset-4 hover:text-[#0F2306] transition-colors py-1"
+                    >
+                      Share Feedback on WhatsApp
+                    </a>
+                    <span className="text-[#1E293B]/60" aria-hidden="true">
+                      &bull;
+                    </span>
+                    <a
+                      href={BUSINESS_EMAIL_LINK}
+                      className="text-[#002B5C] underline decoration-[#002B5C]/45 underline-offset-4 hover:text-[#0F2306] transition-colors py-1"
+                    >
+                      Email Your Review
+                    </a>
+                  </div>
                 </div>
               </div>
             </section>
@@ -709,7 +733,7 @@ export default function App({ initialPath = '/' }: AppProps) {
                     </h2>
                     <p className="mt-2.5 text-white/85 text-[14.5px] sm:text-[15.5px] max-w-[540px] leading-relaxed">
                       Don&apos;t let plumbing problems disrupt your daily routine. Contact FIXIT
-                      PLUMBER to discuss your plumbing requirements.
+                      PLUMBER for planned plumbing work or 24/7 emergency plumbing support in Patna.
                     </p>
                   </div>
                   <div className="flex flex-wrap items-center gap-4 md:shrink-0">

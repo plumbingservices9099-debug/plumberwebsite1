@@ -146,14 +146,17 @@ export function getRouteByPathname(rawPathname: string): RouteMeta {
   return found ?? ROUTE_REGISTRY['not-found'];
 }
 
+export const DEFAULT_PRODUCTION_SITE_URL = 'https://www.fixitplumber.in';
+
 /**
  * Resolves configured production SITE_URL, explicitly ignoring preview URLs
  * (such as *.run.app) or localhost so preview hosts are never published as canonicals.
+ * Falls back to the official production domain https://www.fixitplumber.in.
  */
 export function resolveProductionSiteUrl(rawSiteUrl?: string): string {
-  if (!rawSiteUrl) return '';
+  if (!rawSiteUrl) return DEFAULT_PRODUCTION_SITE_URL;
   const trimmed = rawSiteUrl.trim().replace(/\/+$/, '');
-  if (!trimmed) return '';
+  if (!trimmed) return DEFAULT_PRODUCTION_SITE_URL;
   try {
     const parsed = new URL(trimmed);
     const host = parsed.hostname.toLowerCase();
@@ -163,11 +166,11 @@ export function resolveProductionSiteUrl(rawSiteUrl?: string): string {
       host === '127.0.0.1' ||
       trimmed.includes('MY_SITE_URL')
     ) {
-      return '';
+      return DEFAULT_PRODUCTION_SITE_URL;
     }
     return `${parsed.protocol}//${parsed.host}`;
   } catch {
-    return '';
+    return DEFAULT_PRODUCTION_SITE_URL;
   }
 }
 
